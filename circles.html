@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circles</title>
+	<script type="text/javascript" src="assets/js/lib/paper-full.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/circles.css">
+	<!-- <script type="text/paperscript" canvas="canvas"></script> -->
+	<script type="text/paperscript" canvas="myCanvas">
+
+		function onKeyDown(event) {
+			var maxPoint = new Point(view.size.width, view.size.height);
+			var randomPoint = Point.random();
+			var point = maxPoint * randomPoint;
+
+			var myCircle = new Path.Circle(point, 30);
+			myCircle.fillColor = 'orange';
+		}
+
+
+	</script>
+</head>
+<body>
+	<!-- <canvas id="canvas" resize hidpi="off" style="background:black"></canvas> -->
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
